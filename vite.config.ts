@@ -3,6 +3,7 @@ import solid from 'vite-plugin-solid'
 
 export default defineConfig({
   plugins: [solid()],
+  base: "/kalyanbomzhh",
   build: {
     // Добавь эти настройки
     cssCodeSplit: true,
