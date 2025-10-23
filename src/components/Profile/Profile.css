@@ -1,0 +1,188 @@
+.my-pf {
+    background-color: #000b00;
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.profile-container {
+    height:100%;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    z-index: 5;
+}
+
+/* чтобы оверлей занял весь экран и ничего не ломал */
+.my-pf {
+    position: relative;
+    overflow: hidden; /* скрывать пауков, улетевших вниз/вверх */
+}
+
+/* слой с пауками поверх всего, но клики проходят сквозь него */
+.spider-field {
+    position: fixed;
+    inset: 0;
+    pointer-events: none;
+    z-index: 0; /* поверх фона и карточки */
+}
+
+/* отдельный паук */
+.spider {
+    position: absolute;
+    top: -120px; /* старт за пределами экрана */
+    will-change: transform, filter, opacity;
+    animation-name: spider-fall;
+    animation-duration: 0.5s;
+
+    animation-fill-mode: forwards;
+    /* неоново-зелёный вайб */
+    filter:
+            saturate(2.2)
+            brightness(1.15);
+}
+
+/* падение сверху вниз с лёгким покачиванием */
+@keyframes spider-fall {
+    0% {
+        transform: translateY(-10vh) translateX(0) rotate(185deg);
+    }
+    50% {
+        transform: translateY(50vh) translateX(-10px) rotate(187deg);
+    }
+    100% {
+        transform: translateY(120vh) translateX(10px) rotate(176deg);
+    }
+}
+
+
+.bg-image {
+
+    flex-basis: 400px;
+    height: 100%;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: contain;
+}
+
+.kalyan{
+    background-image: url("/kalyan-20.png");
+    filter: brightness(70%);
+}
+
+.bomzh{
+    background-image: url("/bomzh-rb.png");
+}
+
+.profile {
+    background-color: #040303;
+    width: 20%;
+    height: auto;
+    border-radius: 15px;
+    box-shadow: 0 0 15px 10px #4bfb23;
+
+}
+
+.profile img {
+    width: 15%;
+    display: block;
+    margin: 15px auto 10px auto;
+}
+
+.profile-title {
+    text-align: center;
+}
+
+.profile-title2 {
+    text-align: center;
+}
+
+.profile-text {
+    background-color: rgba(59, 255, 10, 0.09);
+    margin: 5px auto ;
+    width: 90%;
+    padding: 3px;
+    border-radius: 8px;
+
+}
+
+.online, .offline{
+width: 90%;
+    margin:10px auto;
+    padding: 6px;
+    border-radius: 15px;
+    text-align: center;
+}
+
+.offline {
+    background-color: rgba(128, 128, 128, 0.37);
+    border: 1px solid rgba(75, 251, 35, 0.49);
+    color: rgba(216, 88, 161, 0.54);
+}
+
+hr {
+    background-color: rgba(75, 251, 35, 0.58);
+    border:none;
+    height: 2px;
+    box-shadow: 0px 5px 4px 2px #4bfb23;
+}
+
+.online {
+    background-color: rgba(75, 251, 35, 0.14);
+    border: 1px solid rgba(75, 251, 35, 0.49);
+    color: rgba(75, 251, 35, 0.34);
+    margin: 10px auto ;
+    margin-bottom: 15px;
+}
+
+.respect-sect{
+    padding: 5px;
+    border-top: 1px solid green;
+    border-bottom: 1px solid green;
+    width: 90%;
+    margin: auto;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    text-align: center;
+    align-items: center;
+    background-color: rgba(53, 92, 45, 0.54);
+    margin-top: 25px;
+
+
+}
+
+.rs-count{
+    color: rgba(142, 141, 141, 0.7);
+    font-weight: bold;
+    font-size: large;
+}
+
+.rs-btn{
+    color: rgba(221, 218, 218, 0.65);
+    background-color: #0e0e0e;
+    padding: 6px;
+    border-radius: 15px;
+    font-size: 15px;
+
+
+}
+
+
+@media (max-width: 768px) {
+    .profile {
+        width: 70%;
+    }
+
+    .bg-image {
+        flex-basis: 400px;
+        width: 50%;
+    }
+
+    .profile-container {
+        flex-direction: column;
+    }
+}

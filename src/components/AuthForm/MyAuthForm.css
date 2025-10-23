@@ -1,0 +1,29 @@
+.my-div {
+    background-color: #fffdfd;
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+form {
+    background-color: rgba(110, 106, 106, 0.49);
+    width: 15%;
+    padding: 15px;
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+}
+
+input {
+    border-radius: 5px;
+    width: 100%;
+    padding: 3px;
+    outline: none;
+    border: none;
+    margin-top: 4px;
+
+
+}
