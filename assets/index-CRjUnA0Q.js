@@ -704,7 +704,7 @@ function cleanChildren(parent, current, marker, replacement) {
   } else parent.insertBefore(node, marker);
   return [node];
 }
-const pauk = "/KalyanBomzha/assets/pauk-rFkmlJg1.png";
+const pauk = "/kalyanbomzhh/assets/pauk-rFkmlJg1.png";
 var _tmpl$$1 = /* @__PURE__ */ template(`<div class=my-pf><div class=spider-field></div><div class=profile-container><div class="kalyan bg-image"></div><div class=profile><h2 class=profile-title>🚷Профиль🚷</h2><h2 class=profile-title2>🚷пользователя🚷</h2><hr><img class=profile-icon><p class=profile-text>👾 <strong>Имя:</strong> </p><p class=profile-text>🦈 <strong>Возраст:</strong> </p><p class=profile-text>🕸️ <strong>Хобби:</strong> </p><div class=respect-sect><div class=rs-count>🕸️респекты: </div><input type=button value="🖤кинуть респект"class=rs-btn></div><div><span class=status-icon style=margin-right:5px></span><span class=status-text></span></div></div><div class="bomzh bg-image">`), _tmpl$2 = /* @__PURE__ */ template(`<img alt class=spider>`);
 function Profile(props) {
   const [name] = createSignal(props.name);
